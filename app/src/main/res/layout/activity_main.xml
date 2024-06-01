@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
 
     <TextView
         android:id="@+id/connect_state"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"
+        android:textSize="30sp"
+        android:textColor="@color/yellow"
         android:text="未连接"/>
 
     <Button
         android:id="@+id/settings_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300px"
+        android:layout_height="150px"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="140dp"
+        android:background="@drawable/btn1"
         android:text="设置"
-        android:textSize="20sp"/>
+        android:textSize="25sp" />
+
     <Button
         android:id="@+id/pubsub_test_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="150px"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn2"
         android:text="测试发布订阅"
-        android:textSize="20sp"/>
+        android:textSize="25sp" />
+
     <Button
         android:id="@+id/dev_demo_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="262dp"
+        android:layout_height="150px"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btn3"
         android:text="示例设备"
-        android:textSize="20sp"/>
+        android:textSize="25sp" />
 </LinearLayout>
