@@ -3,27 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    >
 
     <TextView
         android:id="@+id/pubsub_connect_state"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="30dp"
         android:text="未连接"
-        android:textSize="20sp" />
+        android:textColor="@color/yellow"
+        android:textSize="30sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp"
-        app:cardCornerRadius="4dp">
+        app:cardCornerRadius="16dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,6 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:text="发布主题:" />
 
                 <EditText
@@ -66,20 +75,24 @@
                 android:id="@+id/pubsub_publish_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
                 android:text="发布主题"
+                android:background="@drawable/btn2"
                 android:textSize="20sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="230dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            app:cardCornerRadius="16dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -112,23 +125,30 @@
                             android:textSize="20sp" />
                     </LinearLayout>
 
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="消息接收:" />
+                        android:layout_marginTop="10px"
+                        android:text="消息接收:"
+                        android:textSize="37px" />
 
                     <TextView
                         android:id="@+id/message_recv_tv"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        android:hint=""
+                        android:textSize="20sp" />
 
                     <Button
                         android:id="@+id/pubsub_ubscribe_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
+                        android:background="@drawable/btn2"
                         android:text="订阅主题"
                         android:textSize="20sp" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
