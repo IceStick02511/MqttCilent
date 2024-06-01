@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/connect_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="未连接"/>
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/pubsub_test_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试发布订阅"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/dev_demo_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="示例设备"
+        android:textSize="20sp"/>
+</LinearLayout>
