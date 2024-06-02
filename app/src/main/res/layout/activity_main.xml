@@ -22,7 +22,9 @@
         android:layout_marginLeft="140dp"
         android:background="@drawable/btn1"
         android:text="设置"
+        android:gravity="center"
         android:textSize="25sp" />
+
 
     <Button
         android:id="@+id/pubsub_test_btn"
@@ -32,6 +34,7 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/btn2"
         android:text="测试发布订阅"
+        android:gravity="center"
         android:textSize="25sp" />
 
     <Button
@@ -42,5 +45,18 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/btn3"
         android:text="示例设备"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtOne"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:text="今天的天气是25℃"
+        android:textColor="#000000"
         android:textSize="25sp" />
 </LinearLayout>

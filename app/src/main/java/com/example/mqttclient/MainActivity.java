@@ -16,6 +16,9 @@ import com.example.mqttclient.mqtt.MqttService;
 
 import org.eclipse.paho.client.mqttv3.MqttException;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
 public class MainActivity extends AppCompatActivity implements MqttService.MqttEventCallBack {
 
     private TextView connectState;
@@ -25,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
     private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            mqttBinder = (MqttService.MqttBinder)iBinder;
+            mqttBinder = (MqttService.MqttBinder) iBinder;
             mqttBinder.setMqttEventCallback(MainActivity.this);
-            if(mqttBinder.isConnected()){
+            if (mqttBinder.isConnected()) {
                 connectState.setText("已连接");
                 subscribeTopics();
             } else {
@@ -73,9 +76,17 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.txtOne).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialog();
+            }
+        });
     }
 
-    void subscribeTopics(){
+
+    void subscribeTopics() {
         try {
             mqttBinder.subscribe("/test");
         } catch (MqttException e) {
@@ -83,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
         }
     }
 
-    void unSubscribeTopics(){
+    void unSubscribeTopics() {
         try {
             mqttBinder.unSubscribe("/test");
         } catch (MqttException e) {
@@ -99,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
 
     @Override
     public void onConnectError(String error) {
-        Log.d(TAG, "onConnectError: "+error);
+        Log.d(TAG, "onConnectError: " + error);
         connectState.setText("未连接");
     }
 
@@ -115,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
     @Override
     protected void onRestart() {
         super.onRestart();
-        if(mqttBinder.isConnected()){
+        if (mqttBinder.isConnected()) {
             connectState.setText("已连接");
             subscribeTopics();
         } else {
@@ -135,4 +146,23 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
         super.onDestroy();
     }
 
+
+    private void showAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // 设置弹窗的标题
+        builder.setTitle("天气");
+
+        // 设置弹窗的消息内容
+        builder.setMessage("今天的天气是25℃");
+
+        // 添加一个确定按钮及点击事件
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss(); // 关闭对话框
+            }
+        });
+
+    }
 }
