@@ -156,11 +156,10 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
         // 设置弹窗的消息内容
         builder.setMessage("今天的天气是25℃");
 
-        // 添加一个确定按钮及点击事件
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss(); // 关闭对话框
+                dialog.dismiss();
             }
         });
 
