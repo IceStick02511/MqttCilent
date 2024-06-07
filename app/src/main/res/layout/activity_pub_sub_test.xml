@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg_main"
+    android:background="@drawable/bg"
     >
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="30dp"
         android:text="未连接"
-        android:textColor="@color/yellow"
+        android:textColor="@color/blue"
         android:textSize="30sp" />
 
     <androidx.cardview.widget.CardView
@@ -42,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="发布主题:" />
+                    android:text="记录主题:" />
 
                 <EditText
                     android:id="@+id/topic_publish_et"
@@ -61,7 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="消息发送:" />
+                    android:text="事件发布" />
 
                 <EditText
                     android:id="@+id/message_publish_et"
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="发布主题"
+                android:text="记录事件"
                 android:background="@drawable/btn2"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -115,7 +115,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="订阅主题:" />
+                            android:text="设备:" />
 
                         <EditText
                             android:id="@+id/topic_sub_et"
@@ -146,7 +146,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:background="@drawable/btn2"
-                        android:text="订阅主题"
+                        android:text="查收消息"
                         android:textSize="20sp" />
 
                 </LinearLayout>

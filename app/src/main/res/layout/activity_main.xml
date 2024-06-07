@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_main">
+    android:background="@drawable/bg">
 
     <TextView
         android:id="@+id/connect_state"
@@ -11,18 +11,18 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="150dp"
         android:textSize="30sp"
-        android:textColor="@color/yellow"
+        android:textColor="@color/blue"
         android:text="未连接"/>
 
     <Button
         android:id="@+id/settings_btn"
-        android:layout_width="300px"
+        android:layout_width="260dp"
         android:layout_height="150px"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="140dp"
         android:background="@drawable/btn1"
-        android:text="设置"
         android:gravity="center"
+        android:text="设置"
         android:textSize="25sp" />
 
 
@@ -33,7 +33,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/btn2"
-        android:text="发布和订阅"
+        android:text="记录和检查"
         android:gravity="center"
         android:textSize="25sp" />
 
@@ -51,12 +51,11 @@
     <TextView
         android:id="@+id/txtthis"
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="60dp"
-        android:background="@color/yellow"
+        android:layout_marginTop="90dp"
         android:gravity="center"
-        android:text="今天的天气是25℃"
-        android:textColor="#000000"
+        android:text="今日天气：25℃"
+        android:textColor="#f46a0e"
         android:textSize="25sp" />
 </LinearLayout>

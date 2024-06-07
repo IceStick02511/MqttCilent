@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_main">
+    android:background="@drawable/bg">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="服务器IP:"
-            android:textColor="@color/yellow"
+            android:textColor="@color/blue"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/et_server_ip"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="端口号:"
-            android:textColor="@color/yellow"
+            android:textColor="@color/blue"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/et_server_port"
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="客户端ID:"
-            android:textColor="@color/yellow"
+            android:textColor="@color/blue"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/et_client_id"
@@ -67,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200px"
             android:text="用户名:"
-            android:textColor="@color/yellow"
+            android:textColor="@color/blue"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/et_user_name"
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200px"
             android:text="密码:"
-            android:textColor="@color/yellow"
+            android:textColor="@color/blue"
             android:textSize="20sp"/>
         <EditText
             android:id="@+id/et_password"
