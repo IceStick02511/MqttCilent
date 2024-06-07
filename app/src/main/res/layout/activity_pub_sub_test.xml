@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
-    >
+    android:background="@drawable/bg_main">
 
     <TextView
         android:id="@+id/pubsub_connect_state"
@@ -42,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:text="记录主题:" />
+                    android:text="发布主题:" />
 
                 <EditText
                     android:id="@+id/topic_publish_et"
@@ -61,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="事件发布" />
+                    android:text="消息发送：" />
 
                 <EditText
                     android:id="@+id/message_publish_et"
@@ -76,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
-                android:text="记录事件"
+                android:text="发布主题"
                 android:background="@drawable/btn2"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -115,7 +114,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="设备:" />
+                            android:text="订阅主题:" />
 
                         <EditText
                             android:id="@+id/topic_sub_et"
@@ -146,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:background="@drawable/btn2"
-                        android:text="查收消息"
+                        android:text="订阅主题"
                         android:textSize="20sp" />
 
                 </LinearLayout>

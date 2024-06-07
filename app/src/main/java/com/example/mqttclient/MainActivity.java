@@ -77,12 +77,7 @@ public class MainActivity extends AppCompatActivity implements MqttService.MqttE
             }
         });
 
-        findViewById(R.id.txtthis).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showAlertDialog();
-            }
-        });
+
     }
 
 
